@@ -1,38 +1,156 @@
-.App {
+/* src/App.css */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Asegurar que el contenedor cubra toda la altura de la ventana */
+}
+
+#app {
+  width: 80%;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #086961;
+}
+
+h2{
+  color: #086961;
+}
+
+.btnSala {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Visualización de Salas */
+.sala {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sala:hover {
+  background-color: #2980b9;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Reserva de Salas */
+.reserva-form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.inputRedondeado label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333; /* Ajusta el color del texto según tus preferencias */
+}
+
+.inputRedondeado select,
+.inputRedondeado button {
+  width: 100%; /* Hace que ambos ocupen el 100% del ancho disponible */
+  padding: 10px; /* Ajusta el padding según tus preferencias */
+  margin-bottom: 10px; /* Agrega margen inferior para separar cada elemento */
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.inputRedondeado select:hover,
+.inputRedondeado select:focus {
+  border-color: #3498db; /* Cambia el color del borde en hover y focus */
+}
+
+.inputRedondeado button {
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+}
+
+.inputRedondeado button:hover {
+  background-color: #2980b9;
+}
+
+button {
+  background-color: #2ecc71;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #27ae60;
+}
+
+.inputRedondeado input:hover {
+  border-color: #2ecc71;
+}
+
+.inputRedondeado input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.inputRedondeado button:hover {
+  background-color: #2980b9;
+}
+
+/* Listado de Reservas */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #ecf0f1;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  #app {
+    width: 100%;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .sala {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .reserva-form {
+    margin-top: 10px;
   }
 }
